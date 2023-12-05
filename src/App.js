@@ -74,8 +74,8 @@ export default class App extends Component {
           {/* BpkLoadingButton examples */}
           {/* ... Previous BpkLoadingButton examples */}
           {/* BpkButtonV2 examples */}
-          <BpkButtonV2>Primary</BpkButtonV2>
-          <BpkButtonV2 size={SIZE_TYPES.large}>Large primary</BpkButtonV2>
+          <BpkButtonV2>Continue</BpkButtonV2>
+          
           <BpkButtonV2 type={BUTTON_TYPES.secondary}>Secondary</BpkButtonV2>
           <BpkButtonV2 type={BUTTON_TYPES.secondaryOnDark}>SecondaryOnDark</BpkButtonV2>
           <BpkButtonV2 type={BUTTON_TYPES.link}>Link</BpkButtonV2>
