@@ -75,17 +75,6 @@ export default class App extends Component {
           {/* ... Previous BpkLoadingButton examples */}
           {/* BpkButtonV2 examples */}
           <BpkButtonV2>Continue</BpkButtonV2>
-          
-          <BpkButtonV2 type={BUTTON_TYPES.secondary}>Secondary</BpkButtonV2>
-          <BpkButtonV2 type={BUTTON_TYPES.secondaryOnDark}>SecondaryOnDark</BpkButtonV2>
-          <BpkButtonV2 type={BUTTON_TYPES.link}>Link</BpkButtonV2>
-          <BpkButtonV2 type={BUTTON_TYPES.linkOnDark}>LinkOnDark</BpkButtonV2>
-          <BpkButtonV2 type={BUTTON_TYPES.primaryOnDark}>PrimaryOnDark</BpkButtonV2>
-          <BpkButtonV2 type={BUTTON_TYPES.primaryOnLight}>PrimaryOnLight</BpkButtonV2>
-          <BpkButtonV2 iconOnly>
-            <AlignedArrowIcon />
-            <span className="visually-hidden">Search</span>
-          </BpkButtonV2>
         </div>
         <div className="App">
           <header className="App-header">
