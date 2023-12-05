@@ -1,15 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { Component } from 'react';
-import BpkCalendar, {
-  CALENDAR_SELECTION_TYPE,
-} from '@skyscanner/backpack-web/bpk-component-calendar';
-import BpkInput, {
-  INPUT_TYPES,
-} from '@skyscanner/backpack-web/bpk-component-input';
+import React, { Component } from 'react';
+import BpkCalendar, { CALENDAR_SELECTION_TYPE } from '@skyscanner/backpack-web/bpk-component-calendar';
+import BpkInput, { INPUT_TYPES } from '@skyscanner/backpack-web/bpk-component-input';
 import BpkLoadingButton from '@skyscanner/backpack-web/bpk-component-loading-button';
 import BaggageIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/baggage';
-import { withButtonAlignment, withRtlSupport } from '@skyscanner/backpack-web/bpk-component-icon';
 import ArrowIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/long-arrow-right';
 import { BpkButtonV2, BUTTON_TYPES, SIZE_TYPES } from '@skyscanner/backpack-web/bpk-component-button';
 import format from 'date-fns/format';
@@ -22,7 +17,48 @@ const AlignedArrowIcon = withButtonAlignment(withRtlSupport(ArrowIcon));
 const formatDateFull = (date) => format(date, 'EEEE, do MMMM yyyy');
 const formatMonth = (date) => format(date, 'MMMM yyyy');
 const daysOfWeek = [
-  // ... your daysOfWeek array remains unchanged
+  {
+    name: 'Sunday',
+    nameAbbr: 'Sun',
+    index: 0,
+    isWeekend: true,
+  },
+  {
+    name: 'Monday',
+    nameAbbr: 'Mon',
+    index: 1,
+    isWeekend: false,
+  },
+  {
+    name: 'Tuesday',
+    nameAbbr: 'Tue',
+    index: 2,
+    isWeekend: false,
+  },
+  {
+    name: 'Wedday',
+    nameAbbr: 'Wed',
+    index: 3,
+    isWeekend: false,
+  },
+  {
+    name: 'Thrusday',
+    nameAbbr: 'Thr',
+    index: 4,
+    isWeekend: false,
+  },
+  {
+    name: 'Friday',
+    nameAbbr: 'Fri',
+    index: 5,
+    isWeekend: false,
+  },
+  {
+    name: 'Saturday',
+    nameAbbr: 'Sat',
+    index: 6,
+    isWeekend: true,
+  },
 ];
 
 export default class App extends Component {
