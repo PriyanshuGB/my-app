@@ -18,10 +18,10 @@ const daysOfWeek = [
     index: 0,
     isWeekend: true,
   },
-  // ...
+  // ... Other days of the week
 ];
 
-export class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
 
@@ -68,26 +68,3 @@ export class App extends Component {
     );
   }
 }
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Flight Schedule 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
