@@ -18,6 +18,42 @@ const daysOfWeek = [
     index: 0,
     isWeekend: true,
   },
+  {
+    name: 'Monday',
+    nameAbbr: 'Mon',
+    index: 1,
+    isWeekend: false,
+  },
+  {
+    name: 'Tuesday',
+    nameAbbr: 'Tue',
+    index: 2,
+    isWeekend: false,
+  },
+  {
+    name: 'Wedday',
+    nameAbbr: 'Wed',
+    index: 3,
+    isWeekend: false,
+  },
+  {
+    name: 'Thrusday',
+    nameAbbr: 'Thr',
+    index: 4,
+    isWeekend: false,
+  },
+  {
+    name: 'Friday',
+    nameAbbr: 'Fri',
+    index: 5,
+    isWeekend: false,
+  },
+  {
+    name: 'Saturday',
+    nameAbbr: 'Sat',
+    index: 6,
+    isWeekend: true,
+  },
   // ... Other days of the week
 ];
 
