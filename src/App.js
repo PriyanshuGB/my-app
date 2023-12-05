@@ -54,7 +54,6 @@ const daysOfWeek = [
     index: 6,
     isWeekend: true,
   },
-  // ... Other days of the week
 ];
 
 export default class App extends Component {
@@ -81,25 +80,43 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <BpkInput
-          id="dateInput"
-          type={INPUT_TYPES.text}
-          name="date"
-          value={(this.state.selectionConfiguration.date || '').toString()}
-          placeholder="Departure date"
-        />
-        <BpkCalendar
-          id="calendar"
-          onDateSelect={this.handleDateSelect}
-          formatMonth={formatMonth}
-          formatDateFull={formatDateFull}
-          daysOfWeek={daysOfWeek}
-          weekStartsOn={1}
-          changeMonthLabel="Change month"
-          nextMonthLabel="Next month"
-          previousMonthLabel="Previous month"
-          selectionConfiguration={this.state.selectionConfiguration}
-        />
+        <div>
+          <BpkInput
+            id="dateInput"
+            type={INPUT_TYPES.text}
+            name="date"
+            value={(this.state.selectionConfiguration.date || '').toString()}
+            placeholder="Departure date"
+          />
+          <BpkCalendar
+            id="calendar"
+            onDateSelect={this.handleDateSelect}
+            formatMonth={formatMonth}
+            formatDateFull={formatDateFull}
+            daysOfWeek={daysOfWeek}
+            weekStartsOn={1}
+            changeMonthLabel="Change month"
+            nextMonthLabel="Next month"
+            previousMonthLabel="Previous month"
+            selectionConfiguration={this.state.selectionConfiguration}
+          />
+        </div>
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Flight Schedule 
+            </p>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
+          </header>
+        </div>
       </div>
     );
   }
