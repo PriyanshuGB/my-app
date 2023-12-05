@@ -8,6 +8,11 @@ import BaggageIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/baggage'
 import ArrowIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/long-arrow-right';
 import { BpkButtonV2, BUTTON_TYPES, SIZE_TYPES } from '@skyscanner/backpack-web/bpk-component-button';
 import format from 'date-fns/format';
+import {
+  withButtonAlignment,
+  withRtlSupport,
+} from '@skyscanner/backpack-web/bpk-component-icon';
+
 
 const AlignedBaggageIcon = withButtonAlignment(withRtlSupport(BaggageIcon));
 const icon = <AlignedBaggageIcon />;
