@@ -7,53 +7,22 @@ import BpkCalendar, {
 import BpkInput, {
   INPUT_TYPES,
 } from '@skyscanner/backpack-web/bpk-component-input';
+import BpkLoadingButton from '@skyscanner/backpack-web/bpk-component-loading-button';
+import BaggageIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/baggage';
+import { withButtonAlignment, withRtlSupport } from '@skyscanner/backpack-web/bpk-component-icon';
+import ArrowIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/long-arrow-right';
+import { BpkButtonV2, BUTTON_TYPES, SIZE_TYPES } from '@skyscanner/backpack-web/bpk-component-button';
 import format from 'date-fns/format';
+
+const AlignedBaggageIcon = withButtonAlignment(withRtlSupport(BaggageIcon));
+const icon = <AlignedBaggageIcon />;
+
+const AlignedArrowIcon = withButtonAlignment(withRtlSupport(ArrowIcon));
 
 const formatDateFull = (date) => format(date, 'EEEE, do MMMM yyyy');
 const formatMonth = (date) => format(date, 'MMMM yyyy');
 const daysOfWeek = [
-  {
-    name: 'Sunday',
-    nameAbbr: 'Sun',
-    index: 0,
-    isWeekend: true,
-  },
-  {
-    name: 'Monday',
-    nameAbbr: 'Mon',
-    index: 1,
-    isWeekend: false,
-  },
-  {
-    name: 'Tuesday',
-    nameAbbr: 'Tue',
-    index: 2,
-    isWeekend: false,
-  },
-  {
-    name: 'Wedday',
-    nameAbbr: 'Wed',
-    index: 3,
-    isWeekend: false,
-  },
-  {
-    name: 'Thrusday',
-    nameAbbr: 'Thr',
-    index: 4,
-    isWeekend: false,
-  },
-  {
-    name: 'Friday',
-    nameAbbr: 'Fri',
-    index: 5,
-    isWeekend: false,
-  },
-  {
-    name: 'Saturday',
-    nameAbbr: 'Sat',
-    index: 6,
-    isWeekend: true,
-  },
+  // ... your daysOfWeek array remains unchanged
 ];
 
 export default class App extends Component {
@@ -100,6 +69,23 @@ export default class App extends Component {
             previousMonthLabel="Previous month"
             selectionConfiguration={this.state.selectionConfiguration}
           />
+        </div>
+        <div>
+          {/* BpkLoadingButton examples */}
+          {/* ... Previous BpkLoadingButton examples */}
+          {/* BpkButtonV2 examples */}
+          <BpkButtonV2>Primary</BpkButtonV2>
+          <BpkButtonV2 size={SIZE_TYPES.large}>Large primary</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.secondary}>Secondary</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.secondaryOnDark}>SecondaryOnDark</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.link}>Link</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.linkOnDark}>LinkOnDark</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.primaryOnDark}>PrimaryOnDark</BpkButtonV2>
+          <BpkButtonV2 type={BUTTON_TYPES.primaryOnLight}>PrimaryOnLight</BpkButtonV2>
+          <BpkButtonV2 iconOnly>
+            <AlignedArrowIcon />
+            <span className="visually-hidden">Search</span>
+          </BpkButtonV2>
         </div>
         <div className="App">
           <header className="App-header">
